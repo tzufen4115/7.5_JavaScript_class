@@ -142,3 +142,100 @@ var testE = true;
 console.log('顛倒:' + !testE);
 // 加! >>>回應會從事實變成相反
 // 會變成false
+
+
+// && >>>並且
+// 只要有一個false結果就是false
+console.log(true && true);
+console.log(true && false);
+console.log(false && true);
+console.log(false && false);
+
+// -----------
+
+// 判斷式 if
+// 語法 Syntax
+// if (布林值) {當布林值為true會執行}
+if (true) {
+    console.log('我是判斷式');
+}
+
+// else >>>否則
+// 語法:
+// if (布林值) {當布林值為true會執行}
+var boolTest = false;
+
+if (boolTest) {
+    console.log('布林值是true');
+}
+else {console.log('布林值是false');
+}
+
+
+// 分數歸類
+var score=document.getElementById('score');
+var result=document.getElementById('result');
+
+score.onchange = () => {
+    // result.innerText='變更中...';
+    
+    var s = parseInt(score.value);
+
+    if(s >=60) {
+        result.innerText='分數:' + s + '-及格';
+    }
+    else if(s>=40) {
+        result.innerText='分數:' + s + '-補考';
+    }
+    else {
+        result.innerText='分數:' + s + '被當';
+    }
+}
+
+for (let i = 0; i <10; i++) {
+    console.log('迴圈:' + i);
+}
+
+// 陣列可與迴圈做結合
+var products = ['產品A', '產品B', '產品C'];
+
+for (let i = 0; i < products.length; i++) {
+    console.log(products[i]);
+}
+
+var ps = document.getElementsByClassName('product');
+console.log(ps);
+for(let i=0; i<ps.length; i++) {
+    ps[i].innerText=products[i];
+}
+
+// const 常數(constance)
+const pi = 3.14159;
+
+
+// let與var差異
+// let在同樣的區塊內不能重複 >>> 安全
+// 只在區塊內有效
+
+// var{let}
+var countA = 10;
+var countA = 5;
+{
+    let countA = 7;
+    console.log(countA);
+}
+console.log(countA);
+
+// var{var}
+var countB = 99;
+{
+    var countB = 77;
+}
+console.log(countB);
+
+// let{let}
+let countC = 66;
+{
+    let countC = 22;
+}
+console.log(countC);
